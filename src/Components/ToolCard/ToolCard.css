@@ -45,6 +45,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: max-height 0.3s ease; /* Add a smooth transition */
+  display: flex; /* Add flex display for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .tool-description.expanded {

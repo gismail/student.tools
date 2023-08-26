@@ -26,10 +26,10 @@ function App() {
       </header>
 
       <div>
-        {placeholderToolData.map((tool, index) => (
+        {placeholderToolData.map((tool) => (
           <ToolCard
-            key={index}
-            title={tool.title}
+            key={tool.id}
+            title={tool.name}
             categories={tool.categories}
             description={tool.description}
             maxDescriptionLength={maxDescriptionLength}

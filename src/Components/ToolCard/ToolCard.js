@@ -2,12 +2,12 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ToolCard.css'; // You can create this CSS file for styling
 
-function ToolCard({ title, categories, description, maxDescriptionLength}) {
+function ToolCard({ title, categories, description, maxDescriptionLength }) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const truncatedDescription =
     description.length > maxDescriptionLength
-      ? description.slice(0, maxDescriptionLength-3) + '...'
+      ? description.slice(0, maxDescriptionLength - 3) + '...'
       : description;
   return (
 

@@ -20,10 +20,10 @@ function CategoryPage() {
         <div>
             <h2>Category: {category}</h2>
             <div>
-                {filteredTools.map((tool, index) => (
+                {filteredTools.map((tool) => (
                     <ToolCard
-                        key={index}
-                        title={tool.title}
+                        key={tool.id}
+                        title={tool.name}
                         categories={tool.categories}
                         description={tool.description}
                         maxDescriptionLength={maxDescriptionLength}

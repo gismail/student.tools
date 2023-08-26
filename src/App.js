@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import './Components/ToolCard/ToolCard.css'
 import ToolCard from './Components/ToolCard/ToolCard';
-import useMaxDescriptionLength from './Components/Commons/useMaxDescriptionLength';
+import useMaxDescriptionLength from './Hooks/useMaxDescriptionLength';
+import useData from './Hooks/useData';
 
 
-
-function App({ placeholderToolData }) {
+function App() {
+  const placeholderToolData = useData();
   const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
 
   return (

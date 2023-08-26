@@ -2,8 +2,11 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import ToolCard from '../ToolCard/ToolCard';
-import useMaxDescriptionLength from '../Commons/useMaxDescriptionLength';
-function CategoryPage({ placeholderToolData }) {
+import useMaxDescriptionLength from '../../Hooks/useMaxDescriptionLength';
+import useData from '../../Hooks/useData';
+
+function CategoryPage() {
+    const placeholderToolData = useData();
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const category = queryParams.get('category');

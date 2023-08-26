@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import './Components/ToolCard/ToolCard.css'
+import ToolCard from './Components/ToolCard/ToolCard';
+import useMaxDescriptionLength from './Components/Commons/useMaxDescriptionLength';
 
-function App() {
+
+
+function App({ placeholderToolData }) {
+  const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +25,20 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <div>
+        {placeholderToolData.map((tool, index) => (
+          <ToolCard
+            key={index}
+            title={tool.title}
+            categories={tool.categories}
+            description={tool.description}
+            maxDescriptionLength={maxDescriptionLength}
+          />
+        ))}
+      </div>
     </div>
+
   );
 }
 

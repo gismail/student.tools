@@ -1,0 +1,59 @@
+.tool-card {
+  border: 1px solid #ccc;
+  margin: 10px;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  float: left;
+
+  &:nth-child(4n+1) {
+    clear: left;
+  }
+  &.hovered {
+    .tool-description {
+      max-height: none;
+    }
+  }
+}
+
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100%;
+  padding: 20px;
+}
+
+.tool-categories {
+  margin-bottom: 10px;
+}
+
+.tool-categories a,
+.tool-title {
+  text-decoration: none;
+  margin-right: 5px; /* Add spacing between category links */
+  cursor: pointer; /* Add cursor pointer to indicate interactivity */
+}
+
+.tool-title {
+  margin-bottom: 10px;
+  font-size: 18px; /* Adjust the font size */
+}
+
+.tool-description {
+  max-height: 50px; /* Set initial max-height to truncate description */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease; /* Add a smooth transition */
+}
+
+.tool-description.expanded {
+  max-height: none; /* Allow full description height on hover */
+}
+
+@media (max-width: 768px) {
+  .tool-card {
+    width: 100%;
+    clear: both;
+  }
+}

@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 
 import ToolCard from '../ToolCard/ToolCard';
 import useMaxDescriptionLength from '../../Hooks/useMaxDescriptionLength';
-import useData from '../../Hooks/useData';
+import { useData } from '../../Hooks/DataProvider';
+
 
 function CategoryPage() {
     const placeholderToolData = useData();
@@ -14,6 +15,7 @@ function CategoryPage() {
         tool.categories.includes(category)
     );
     const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
+    console.log(maxDescriptionLength)
     return (
         <div>
             <h2>Category: {category}</h2>

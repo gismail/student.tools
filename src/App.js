@@ -3,13 +3,11 @@ import './App.css';
 import './Components/ToolCard/ToolCard.css'
 import ToolCard from './Components/ToolCard/ToolCard';
 import useMaxDescriptionLength from './Hooks/useMaxDescriptionLength';
-import useData from './Hooks/useData';
-
+import { useData } from './Hooks/DataProvider'; // Import useData hook
 
 function App() {
   const placeholderToolData = useData();
   const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
-
   return (
     <div className="App">
       <header className="App-header">

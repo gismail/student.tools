@@ -10,6 +10,7 @@ export function DataProvider({ children }) {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get('/api/get-data');
+      console.log(response)
       setData(response.data);
     }
     fetchData();

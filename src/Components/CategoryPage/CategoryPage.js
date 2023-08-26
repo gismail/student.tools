@@ -15,7 +15,6 @@ function CategoryPage() {
         tool.categories.includes(category)
     );
     const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
-    console.log(maxDescriptionLength)
     return (
         <div>
             <h2>Category: {category}</h2>

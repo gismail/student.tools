@@ -8,6 +8,7 @@ import { useData } from './Hooks/DataProvider'; // Import useData hook
 function App() {
   const placeholderToolData = useData();
   const maxDescriptionLength = useMaxDescriptionLength(placeholderToolData);
+
   return (
     <div className="App">
       <header className="App-header">

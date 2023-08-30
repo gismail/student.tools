@@ -1,4 +1,5 @@
+import { sql } from '@vercel/postgres';
 export default async function ( req, res) {
-  res.statusCode = 200;
-  res.json({ message: 'It works' });
+  const { rows } = await sql`SELECT * FROM operations;`;
+  res.json(rows);
 }

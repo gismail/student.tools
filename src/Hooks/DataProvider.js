@@ -9,7 +9,7 @@ export function DataProvider({ children }) {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('/api/get-data');
+      const response = await axios.get('/api/');
       console.log(response)
       setData(response.data);
     }

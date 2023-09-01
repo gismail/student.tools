@@ -20,5 +20,9 @@ code {
 #root {
   display: flex;
   flex-direction: column;
-  background-color: #282c34;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
 }

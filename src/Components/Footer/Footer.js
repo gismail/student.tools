@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
   return (
     <div className="footer">
-      <p>© 2023 by My Website. All rights reserved.</p>
+      <p>© {new Date().getFullYear().toFixed()} by Smail Gourmi. All rights reserved.</p>
     </div>
   );
 }

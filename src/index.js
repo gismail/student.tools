@@ -15,20 +15,20 @@ import Footer from './Components/Footer/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.Fragment><Header></Header>
-      <div className="App-body">
-        <Router>
-          <DataProvider> {/* Wrap App component with DataProvider */}
-            <Routes>
-              <Route path="/" element={<App />} />
-              <Route path="/categories" element={<CategoryPage />} />
-              <Route path="/operations/operation" element={<OperationHandler />} />
-            </Routes>
-          </DataProvider>
-        </Router>
-        <Footer/>
-      </div>
-  </React.Fragment>
+  <div className="container"><Header />
+    <div className="App-body">
+      <Router>
+        <DataProvider> {/* Wrap App component with DataProvider */}
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/categories" element={<CategoryPage />} />
+            <Route path="/operations/operation" element={<OperationHandler />} />
+          </Routes>
+        </DataProvider>
+      </Router>
+    </div>
+    <Footer />
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

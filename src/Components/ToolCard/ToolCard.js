@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ToolCard.css'; // You can create this CSS file for styling
 
-function ToolCard({ title, categories, description, maxDescriptionLength }) {
+function ToolCard({ id,title, categories, description, maxDescriptionLength }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const truncatedDescription =
@@ -11,23 +11,29 @@ function ToolCard({ title, categories, description, maxDescriptionLength }) {
       : description;
   return (
 
-    <div className={`tool-card ${isHovered ? 'hovered' : ''}`}
+    <div className={`tool-card-item ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
-      <div className="tool-content">
-        <div className="tool-categories">
+      <Link key={id} to={`/operations/operation?id=${id}&name=${title.replace(/ /g, '_')}`} className="tool-card-item-link">
+        <div className="tool-card-item-bg"></div>
+        <div className="tool-card-item-categories">
           {categories.map((category, index) => (
             <Link key={index} to={`/categories?category=${encodeURIComponent(category)}`}>
               {category}
             </Link>
           ))}
         </div>
-        <h3 className="tool-title">{title}</h3>
-        <div className={`tool-description ${isHovered ? 'expanded' : ''}`}>
-          {isHovered ? description : truncatedDescription}
+        <div className="tool-card-item-title">
+          {title}
         </div>
-      </div>
+
+        <div className="tool-card-item-desc-box">
+            <div className='tool-card-item-desc '>{isHovered ? description : truncatedDescription}</div>
+          
+        </div>
+      </Link>
     </div>
+
   );
 }
 

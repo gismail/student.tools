@@ -7,18 +7,29 @@ import './index.css';
 import App from './App';
 import CategoryPage from './Components/CategoryPage/CategoryPage'; // Import the CategoryPage component
 import { DataProvider } from './Hooks/DataProvider';
+import OperationHandler from './Hooks/OperationHandler';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <DataProvider> {/* Wrap App component with DataProvider */}
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/categories" element={<CategoryPage />} />
-      </Routes>
-    </DataProvider>
-  </Router>
+  <><Header></Header>
+    <div className="App">
+      <div className="App-body">
+        <Router>
+          <DataProvider> {/* Wrap App component with DataProvider */}
+            <Routes>
+              <Route path="/" element={<App />} />
+              <Route path="/categories" element={<CategoryPage />} />
+              <Route path="/operations/operation" element={<OperationHandler />} />
+            </Routes>
+          </DataProvider>
+        </Router>
+      </div></div>
+    <Footer></Footer>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

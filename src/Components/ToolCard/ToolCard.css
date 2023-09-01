@@ -1,62 +1,152 @@
-.tool-card {
-  border: 1px solid #ccc;
-  margin: 10px;
-  width: calc(25% - 20px);
-  box-sizing: border-box;
-  float: left;
-
-  &:nth-child(4n+1) {
-    clear: left;
-  }
-  &.hovered {
-    .tool-description {
-      max-height: none;
-    }
-  }
-}
-
-.tool-content {
+.tool-card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: 100%;
-  padding: 20px;
-}
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 
-.tool-categories {
-  margin-bottom: 10px;
+  padding: 50px 0;
 }
+.tool-card-item {
+  -ms-flex-preferred-size: calc(24% - 25px);
+  flex-basis: calc(24% - 25px);
+  margin: 0 15px 30px;
 
-.tool-categories a,
-.tool-title {
-  text-decoration: none;
-  margin-right: 5px; /* Add spacing between category links */
-  cursor: pointer; /* Add cursor pointer to indicate interactivity */
-}
-
-.tool-title {
-  margin-bottom: 10px;
-  font-size: 18px; /* Adjust the font size */
-}
-
-.tool-description {
-  max-height: 50px; /* Set initial max-height to truncate description */
   overflow: hidden;
-  text-overflow: ellipsis;
-  transition: max-height 0.3s ease; /* Add a smooth transition */
-  display: flex; /* Add flex display for centering */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+
+  border-radius: 28px;
+}
+.tool-card-item-link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+
+  overflow: hidden;
+  text-decoration: none;
+  position: relative;
+}
+.tool-card-item-link:hover,
+.tool-card-item-link:hover .tool-card-item-desc {
+  text-decoration: none;
+  color: #FFF;
+}
+.tool-card-item-link:hover .tool-card-item-bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.tool-card-item-categories {
+  min-height: 43px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: #FFF;
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.tool-card-item-title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.tool-card-item-desc-box {
+  font-size: 16px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.tool-card-item-desc {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+.tool-card-item-bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.tool-card-item:nth-child(2n) .tool-card-item-bg {
+  background-color: #3ecd5e;
+}
+.tool-card-item:nth-child(3n) .tool-card-item-bg {
+  background-color: #e44002;
+}
+.tool-card-item:nth-child(4n) .tool-card-item-bg {
+  background-color: #952aff;
+}
+.tool-card-item:nth-child(5n) .tool-card-item-bg {
+  background-color: #cd3e94;
+}
+.tool-card-item:nth-child(6n) .tool-card-item-bg {
+  background-color: #4c49ea;
 }
 
-.tool-description.expanded {
-  max-height: none; /* Allow full description height on hover */
+
+
+@media only screen and (max-width: 979px) {
+  .tool-card-item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .tool-card-item-title {
+    font-size: 24px;
+  }
 }
 
-@media (max-width: 768px) {
-  .tool-card {
-    width: 100%;
-    clear: both;
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .tool-card-item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .tool-card-item-title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .tool-card-item-link {
+    padding: 22px 40px;
+  }
+  .tool-card-item-desc-box {
+    font-size: 16px;
   }
 }

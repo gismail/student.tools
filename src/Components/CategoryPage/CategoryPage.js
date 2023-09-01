@@ -18,10 +18,11 @@ function CategoryPage() {
     return (
         <div>
             <h2>Category: {category}</h2>
-            <div>
+            <div className="tool-card-box">
                 {filteredTools.map((tool) => (
                     <ToolCard
                         key={tool.id}
+                        id={tool.id}
                         title={tool.name}
                         categories={tool.categories}
                         description={tool.description}

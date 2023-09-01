@@ -13,8 +13,9 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #282c34;
+  flex-grow: 1; /* Allow .App-body to grow and take available space */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+a {
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

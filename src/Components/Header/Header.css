@@ -1,0 +1,39 @@
+/* Header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  
+  .header h1 {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .header nav {
+    margin-right: 20px;
+  }
+  
+  .header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .header nav ul li {
+    margin: 0 10px;
+  }
+  
+  .header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  

@@ -28,11 +28,16 @@
   text-decoration: none;
   position: relative;
 }
+
 .tool-card-item-link:hover,
-.tool-card-item-link:hover .tool-card-item-desc {
-  text-decoration: none;
-  color: #FFF;
+.tool-card-item-link:hover .tool-card-item-desc,
+.tool-card-item-link:hover > .tool-card-item-categories a {
+  color: #FFF !important;
+  text-decoration: none !important;
 }
+
+
+
 .tool-card-item-link:hover .tool-card-item-bg {
   -webkit-transform: scale(10);
   -ms-transform: scale(10);
@@ -53,6 +58,10 @@
   flex-wrap: wrap;
   gap: 5px;
   justify-content: center;
+}
+.tool-card-item-categories a {
+  text-decoration: none;
+  color: #f9b234;
 }
 .tool-card-item-title {
   min-height: 87px;
@@ -89,8 +98,8 @@
 
   z-index: 1;
   position: absolute;
-  top: -75px;
-  right: -75px;
+  top: -80px;
+  right: -80px;
 
   border-radius: 50%;
 

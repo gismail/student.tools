@@ -1,3 +1,21 @@
-.string-input{
-    color: white !important;
+.string-input {
+  color: white !important;
+}
+
+/* Define the flash animation */
+@keyframes flash {
+  from {
+    background-color: greenyellow;
+    opacity: 1;
+  }
+
+  to {
+    background-color: white;
+    opacity: 0.5;
+  }
+}
+
+/* Apply the flash animation to the flash class */
+.flash {
+  animation: flash 0.5s linear;
 }

@@ -1,15 +1,18 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { InputLabel, Typography } from "@mui/material";
+import './string-length.css'
 
 function StringLength() {
     const [stringlength, setStringLength] = useState(0);
-
+    const inputProps = {
+        className : "string-input"
+    }
     return (
         <div>
             <h1>Online Character Counter : Calculate String Length</h1>
-            <Box><TextField
+            <Box><TextField 
                 id="outlined-multiline-static"
                 label="Your Input Text"
                 placeholder="Place your text here ..."
@@ -19,6 +22,7 @@ function StringLength() {
                 fullWidth
                 focused
                 onChange={(event) => { setStringLength(event.target.value.length) }}
+                inputProps={inputProps}
             />
             </Box>
             <Box sx={{ marginTop: '10px', width: '100%' }}>

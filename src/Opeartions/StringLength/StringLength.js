@@ -172,23 +172,19 @@ function StringLength() {
                     </Typography>
                     <Typography align="left" fontSize={18} paragraph>
                         I hope this blog post has helped you understand how to calculate the length of a string without using built-in functions mathematically.<br />
-                        If you have any questions or feedback, please leave them in the comments below.<br />
                         Thank you for reading! 😊
                     </Typography>
                     <Typography align="left" fontSize={18} paragraph>
-                        Source: Conversation avec Bing, 13/09/2023
+                        (1) <a style={{textDecoration: 'none', color: 'violet'}} href="https://stackoverflow.com/questions/3992192/string-length-without-len-function">python - String length without len function - Stack Overflow</a>
                     </Typography>
                     <Typography align="left" fontSize={18} paragraph>
-                        (1) <a href="https://stackoverflow.com/questions/3992192/string-length-without-len-function">python - String length without len function - Stack Overflow</a>
+                        (2) <a style={{textDecoration: 'none', color: 'violet'}} href="https://stackoverflow.com/questions/52681929/calculate-length-of-string-without-using-strlen-function">Calculate length of string without using strlen() function</a>
                     </Typography>
                     <Typography align="left" fontSize={18} paragraph>
-                        (2) <a href="https://stackoverflow.com/questions/52681929/calculate-length-of-string-without-using-strlen-function">Calculate length of string without using strlen() function</a>
+                        (3) <a style={{textDecoration: 'none', color: 'violet'}} href="https://python.plainenglish.io/find-the-length-of-string-without-using-len-function-in-python-e9621e1fa0c8">Find the Length of a String Without Using len Function in Python</a>
                     </Typography>
                     <Typography align="left" fontSize={18} paragraph>
-                        (3) <a href="https://python.plainenglish.io/find-the-length-of-string-without-using-len-function-in-python-e9621e1fa0c8">Find the Length of a String Without Using len Function in Python</a>
-                    </Typography>
-                    <Typography align="left" fontSize={18} paragraph>
-                        (4) <a href="https://stackoverflow.com/questions/16343264/calculate-length-of-a-string-without-using-standard-library-funcionslike-strlen">c++ - calculate length of a string without using standard library</a>
+                        (4) <a style={{textDecoration: 'none', color: 'violet'}} href="https://stackoverflow.com/questions/16343264/calculate-length-of-a-string-without-using-standard-library-funcionslike-strlen">c++ - calculate length of a string without using standard library</a>
                     </Typography>
 
                 </Box>

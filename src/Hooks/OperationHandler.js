@@ -1,21 +1,20 @@
 
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
+import StringLength from '../Opeartions/StringLength/StringLength';
+
+const operationFunctionMap =new Map()
+operationFunctionMap.set(1,<StringLength/>)
+
+
 
 function OperationHandler(){
+    
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
 
     const id = queryParams.get("id");
-    const name = queryParams.get("name")
-    console.log(useParams())
-    return (
-        <div>
-          <h1>Operation Details</h1>
-          <p>ID: {id}</p>
-          <p>Name: {name}</p>
-          {/* Add content and operations here */}
-        </div>
-      );
+    //const name = queryParams.get("name")
+    return (operationFunctionMap.get(parseInt(id)));
 }
 export default OperationHandler;
